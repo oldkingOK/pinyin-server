@@ -8,9 +8,9 @@ app.use(cors());
 app.use(express.json());
 app.post('/', (req, res) => {
     console.log(req.body);
-    let strs = [];
+    let pinyin = [];
     req.body.raw.forEach(element => {
-        strs.push(segment(
+        pinyin.push(segment(
             element,
             {
                 toneType: 'none',
@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
     });
 
     res.send({
-        'strs': strs,
+        'pinyin': pinyin,
     });
 });
 
