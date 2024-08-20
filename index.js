@@ -14,7 +14,7 @@ app.post('/', (req, res) => {
             element,
             {
                 toneType: 'none',
-                format: OutputFormat.PinyinArray,
+                format: OutputFormat.AllArray,
             }
         ));
     });
